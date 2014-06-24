@@ -5,10 +5,36 @@
         <title>Geektic</title>
     </head>
     <body ng-controller="HelloCtrl">
-        <h1>{{ helloMessage.message }}</h1>
+       <h1 align="center" style="font-size:500%" ><span style="color: red;">Bien venue &agrave; Geektic</span></h1>
+       <input type="text" ng-model="name"/>
+		</br>
+		<button ng-click="Search()">Search</button>
+		</br>
+ 
+        <div ng-repeat="listGeek in listGeeks">
+        	<fieldset style="border:solid 1px black; padding:20px; width:250px; color:midnightblue; font-family:verdana;">
+				Nom: {{listGeek.nom}}</br>
+				Prenom: {{listGeek.prenom}}</br>
+				Centre d'interet: {{listGeek.nomCentre}}</br>
+			</fieldset>
+		</div>
+		<fieldset style="border:solid 1px black; padding:20px; width:250px; color:midnightblue; font-family:verdana;">
+		 	<div ng-repeat="geek in geeks">
+				Nom: {{geek.nom}}
+				Prenom: {{geek.prenom}}
+				Centre d'interet: {{geek.nomCentre}}
+
+			</div>
+		</fieldset>
 
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
         <script src="/js/app.js"></script>
     </body>
+    <script>
+
+
+
+
+    </script>
 </html>
