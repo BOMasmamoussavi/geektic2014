@@ -31,5 +31,11 @@ public class GeekService {
 		return dao.findintret(query);
 		
 	}
+	@RequestMapping(value = "/voir", method = RequestMethod.GET)
+	public Geek voir(@RequestParam Long id) {
+		return dao.findById(id);
+		
+	}
+	
 
 }

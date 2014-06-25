@@ -1,0 +1,27 @@
+<form name="myForm">
+	votre centre interet: <input type="text" ng-model="name"/></br>
+	vous etes intresse par: <br/>
+	<input type="radio" ng-model="genre" value="F"> Femme <br/>
+	<input type="radio" ng-model="genre" value="M">Homme <br/>
+ </form>
+<button ng-click="Search()">Search</button></br>
+
+<div ng-repeat="geek in geeks">
+	<fieldset style="border:solid 1px black; padding:20px; width:250px; color:midnightblue; font-family:verdana;">
+		id: {{geek.id}}</br>
+		Nom: {{geek.nom}}</br>
+		Prenom: {{geek.prenom}}</br>
+		Centre d'interet: {{geek.nomCentre}}</br>
+		genre: {{geek.genre}}</br>
+		<img gravatar-src="'{{geek.adresseMail}}'" gravatar-size="100">
+		<button ng-click="voir(geek)">Voir le profil complet</button></br>
+	</fieldset>
+
+</div>
+
+	{{leGeek.nom}}</br>
+	{{leGeek.prenom}}</br>
+	{{leGeek.nomCentre}}</br>
+	{{leGeek.genre}}</br>
+	{{leGeek.adresseMail}}</br>
+

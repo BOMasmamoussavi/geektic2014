@@ -39,4 +39,10 @@ public class GeekDao {
 		return query.getResultList();
 		
 	}
+	public List<Geek> findintretsexe(String intret, String sexe) {
+		TypedQuery<Geek> query = entityManager.createQuery("SELECT g FROM Geek g WHERE g.nomCentre like :nomCentre and :sexe", Geek.class);
+		query.setParameter("nomCentre", "%"+intret+"%");
+		query.setParameter("sexe" , "%"+sexe+"%" );
+		return query.getResultList();
+	}
 }

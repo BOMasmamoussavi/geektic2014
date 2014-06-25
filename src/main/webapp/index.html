@@ -3,33 +3,34 @@
 <html ng-app="geektic">
     <head>
         <title>Geektic</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" title="Style par défaut">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" title="Style par défaut">
     </head>
-    <body ng-controller="HelloCtrl">
-       <h1 align="center" style="font-size:500%" ><span style="color: red;">Bien venue &agrave; Geektic</span></h1>
-       <input type="text" ng-model="name"/>
-		</br>
-		<button ng-click="Search()">Search</button>
-		</br>
- 
-        <div ng-repeat="listGeek in listGeeks">
-        	<fieldset style="border:solid 1px black; padding:20px; width:250px; color:midnightblue; font-family:verdana;">
-				Nom: {{listGeek.nom}}</br>
-				Prenom: {{listGeek.prenom}}</br>
-				Centre d'interet: {{listGeek.nomCentre}}</br>
-			</fieldset>
-		</div>
-		<fieldset style="border:solid 1px black; padding:20px; width:250px; color:midnightblue; font-family:verdana;">
-		 	<div ng-repeat="geek in geeks">
-				Nom: {{geek.nom}}
-				Prenom: {{geek.prenom}}
-				Centre d'interet: {{geek.nomCentre}}
-
+    <body ng-app="app">
+       <h1 align="center" style="font-size:500%" ><span style="color: red;">Bienvenu &agrave; Geektic</span></h1>
+        
+        
+        <div  class="navbar navbar-inverse">
+        	<div class="container">
+		        <div class="container theme-showcase" role="main">
+			        <ul class="nav navbar-nav">
+			        	<li>
+				     		 <a href = "#/acc1">Accueil</a>
+				     	</li>
+				     	<li>
+				      		 <a href = "#/acc2">Recherche</a>
+				      	</li>
+				    </ul>
+				</div>
 			</div>
-		</fieldset>
+		</div>
+		<div ng-view></div>
 
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
         <script src="/js/app.js"></script>
+        <script src="/js/angular-gravatar.js"></script>
+        <script src="/js/md5.js"></script>
     </body>
     <script>
 
